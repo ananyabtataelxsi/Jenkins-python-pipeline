@@ -1,6 +1,7 @@
 from app.calculator import add, subtract, multiply, division
 import pytest
 
+@pytest.mark.smoke
 def test_add():
     assert add(10, 20) == 30
 
@@ -9,7 +10,8 @@ def test_subtract():
 
 def test_multiply():
     assert multiply(10, 5) == 50
-
+    
+@pytest.mark.regression
 def test_division():
     assert division(20, 5) == 4
 
