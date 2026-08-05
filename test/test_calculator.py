@@ -1,20 +1,18 @@
+from app.calculator import add, subtract, multiply, division
 import pytest
- 
-from app.calculator import add,subtract,multiply,division
- 
- 
+
 def test_add():
-    assert add(10,20)==40
- 
+    assert add(10, 20) == 30
+
 def test_subtract():
-    assert subtract(20,10)==10
- 
+    assert subtract(20, 5) == 15
+
 def test_multiply():
-    assert multiply(4,4)==16
- 
+    assert multiply(10, 5) == 50
+
 def test_division():
-    assert division(20,5)==4
- 
+    assert division(20, 5) == 4
+
 def test_divide_by_zero():
     with pytest.raises(ValueError):
-        division(10,0)
+        division(10, 0)
